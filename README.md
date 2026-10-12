@@ -92,6 +92,9 @@ subentry title becomes the entity name.
 - Only `http` and `https` are accepted; the URL must include a host.
 - Whitespace and trailing slashes are stripped.
 - **Include the version path** if your server expects one. Most do: `/v1`.
+
+The integration requires OpenAI Python SDK 2.45.0 or newer. It deliberately
+uses a minimum version so Home Assistant can satisfy its own newer SDK pin.
 - Credentials embedded in the URL (`https://user:pass@host/v1`) are **rejected**. Put
   the token in the API key field — it is stored as a secret and kept out of logs, while
   a base URL is echoed back in error and log messages.
