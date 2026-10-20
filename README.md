@@ -164,6 +164,10 @@ each item costs, and the design decision that has to be made first.
 (commit recorded in [`UPSTREAM_COMMIT`](custom_components/openai_compatible/UPSTREAM_COMMIT)),
 with the domain renamed to `openai_compatible` and the base URL made configurable.
 
+The manifest requires `openai>=2.45.0` rather than core's exact pin: Home Assistant
+installs custom-integration requirements against its own package constraints, so an
+exact pin stops the integration loading whenever core bumps `openai`.
+
 Base-URL handling lives in its own module,
 [`url_util.py`](custom_components/openai_compatible/url_util.py), deliberately separate
 from the vendored files so re-syncing with core stays a clean merge.

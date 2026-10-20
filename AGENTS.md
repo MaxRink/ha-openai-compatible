@@ -6,7 +6,7 @@ This is a public Home Assistant custom integration (`openai_compatible`) for Ope
 
 The README covers installation, configuration, endpoint requirements, development, and releases. `docs/provider-genericity.md` audits remaining OpenAI-specific behavior and records an open design decision; it is not a scheduled plan. The vendored core revision is recorded in `custom_components/openai_compatible/UPSTREAM_COMMIT`. `hacs.json` sets the minimum Home Assistant version (2026.9.0); `manifest.json` carries the integration version. Development and CI use Python 3.14.
 
-Production Home Assistant runs this integration: the `hassio` repo commits a copy at `hassio/custom_components/openai_compatible` (version 0.2.0, matching this repo at the time of writing). Change code here, then copy it into `hassio`; that copy reaches the live instance through the hassio deploy, which needs the owner's OK.
+Production Home Assistant installs this integration through HACS from this repo's GitHub releases; publishing a release and updating in HACS is how a change reaches it (owner's OK). The `hassio` repo's `custom_components/openai_compatible` is only the nightly backup's snapshot of that install; do not edit or copy code into it.
 
 ## Boundaries
 
